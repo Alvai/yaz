@@ -14,7 +14,9 @@ client.on("ready", () => {
   client.user.setActivity(`Cherche de nouvelles blagues`);
 });
 
-const flipCoin = () => Math.floor(Math.random() * 2);
+const flipCoin = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+getRandomArbitrary(0,5); /* ? */
 client.on("messageReactionAdd", (messageReaction, user) => {
   if(messageReaction.emoji.toString() == '👆') {
     const NOTIFY_CHANNEL = client.channels.get(messageReaction.message.channel.id);
@@ -38,7 +40,7 @@ client.on("messageReactionAdd", (messageReaction, user) => {
 });
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
-  if(flipCoin() === 0) return;
+  if(flipCoin(0, 5) !== 0) return;
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
