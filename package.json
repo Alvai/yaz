@@ -8,6 +8,7 @@
     "npm": "*"
   },
   "scripts": {
+    "lint": "./node_modules/.bin/eslint app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
@@ -16,5 +17,10 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
   }
 }
