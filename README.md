@@ -2,7 +2,7 @@ YAZ BOT FOR DISCORD
 -------------------
 [![Build Status](https://travis-ci.org/IvanMiIosevic/Yaz.svg?branch=master)](https://travis-ci.org/IvanMiIosevic/Yaz)
 
-# install
+# Install
 
 ```cli
 npm install
@@ -16,4 +16,10 @@ open app.js and the template AFTER THE LAST IF
     const m = await message.channel.send("WHAT THE BOT IS GOING TO SAY");
   }
 
+```
+## Before Commit 
+
+run 
+```cli
+npm run lint
 ```
