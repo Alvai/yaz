@@ -1,3 +1,7 @@
+YAZ BOT FOR DISCORD 
+-------------------
+[![Build Status](https://travis-ci.org/IvanMiIosevic/Yaz.svg?branch=master)](https://travis-ci.org/IvanMiIosevic/Yaz)
+
 # install
 
 ```cli
