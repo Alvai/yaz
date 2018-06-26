@@ -41,7 +41,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 });
 client.on('message', async (message) => {
   // This event will run on every single message received, from any channel or DM.
-  if (getRandom(0, 5) !== 0) return;
+  if (getRandom(0, 2) !== 0) return;
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
   if (message.author.bot) return;
