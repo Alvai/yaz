@@ -63,6 +63,11 @@ client.on('message', async (message) => {
     await message.channel.send('STOP BULLY ME');
   }
   if (message.content.toLowerCase().includes('stage')) {
+    await message.channel.send('Eh j\' ai un stage maintenant !');
+  }
+  if (message.content.toLowerCase().includes('cdi') 
+      || message.content.toLowerCase().includes('cdd')
+      || message.content.toLowerCase().includes('freelance')) {
     await message.channel.send('Actuellement sans emploi...');
   }
   if (message.content.toLowerCase().includes('sophie')
