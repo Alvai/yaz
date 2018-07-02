@@ -68,7 +68,7 @@ client.on('message', async (message) => {
   if (message.content.toLowerCase().includes('helpUs')) {
     await message.channel.send('https://www.leetchi.com/c/pc-voles-de-sup');
   }
-  if (message.content.toLowerCase().includes('cdi') 
+  if (message.content.toLowerCase().includes('cdi')
       || message.content.toLowerCase().includes('cdd')
       || message.content.toLowerCase().includes('freelance')) {
     await message.channel.send('Actuellement sans emploi...');
