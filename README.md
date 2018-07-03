@@ -1,5 +1,6 @@
 YAZ BOT FOR DISCORD 
 -------------------
+[![Known Vulnerabilities](https://snyk.io/test/github/IvanMiIosevic/Yaz/badge.svg?targetFile=package.json)](https://snyk.io/test/github/IvanMiIosevic/Yaz?targetFile=package.json)
 [![Build Status](https://travis-ci.org/IvanMiIosevic/Yaz.svg?branch=master)](https://travis-ci.org/IvanMiIosevic/Yaz)
 
 # Install
