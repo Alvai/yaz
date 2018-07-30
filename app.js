@@ -1,5 +1,8 @@
 // Load up the discord.js library
 const Discord = require('discord.js');
+const moment = require('moment');
+
+moment.locale('fr');
 
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
@@ -19,7 +22,7 @@ const getRandom = (min, max) => Math.floor((Math.random() * (max - min)) + min);
 client.on('messageReactionAdd', (messageReaction, user) => {
   if (messageReaction.emoji.toString() === '👆') {
     const NOTIFY_CHANNEL = client.channels.get(messageReaction.message.channel.id);
-    const date = new Date().toISOString();
+    const date = moment();
     NOTIFY_CHANNEL.send({
       embed: {
         color: 3447003,
@@ -27,12 +30,12 @@ client.on('messageReactionAdd', (messageReaction, user) => {
           name: messageReaction.message.author.username,
           icon_url: messageReaction.message.author.avatarURL,
         },
-        title: `Posted at ${messageReaction.message.createdAt} in ${messageReaction.message.channel.name}`,
+        title: `${moment(messageReaction.message.createdAt).fromNow()} dans #${messageReaction.message.channel.name}`,
         description: messageReaction.message.content,
         timestamp: date,
         footer: {
           icon_url: user.avatarURL,
-          text: `${user.username} Quoted this message`,
+          text: `${user.username} viens de citer ce message`,
         },
       },
     });
@@ -80,5 +83,8 @@ client.on('message', async (message) => {
     await message.channel.send('Ne prononce plus jamais ce nom.');
   }
 });
-const token = process.env.token || null;
+
+require('dotenv').config();
+
+const token = process.env.TOKEN || null;
 client.login(token);
