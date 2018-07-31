@@ -16,7 +16,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "discord.js": "^11.3.2",
+    "dotenv": "^6.0.0",
+    "moment": "^2.22.2"
   },
   "devDependencies": {
     "eslint": "^5.0.0",
