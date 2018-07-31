@@ -58,7 +58,7 @@ client.on('message', async (message) => {
   // const command = args.shift().toLowerCase();
   // const ar = args;
   // Let's go with a few common example commands! Feel free to delete or change those.
-  if (message.content.toLowerCase().includes('cc '))
+  if (message.content.toLowerCase().includes('cc ')
     || message.content.toLowerCase().includes('coucou')) {
     await message.channel.send(`salut ${message.author.username} :) `);
   }
