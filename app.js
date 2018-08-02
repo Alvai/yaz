@@ -84,7 +84,7 @@ client.on('message', async (message) => {
   }
   if (message.content.toLowerCase() === 'fdp') {
     await message.author.kick();
-    message.channel.send("NE DITES PAS CA");
+    message.channel.send('NE DITES PAS CA');
   }
 });
 
