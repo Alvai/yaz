@@ -82,7 +82,7 @@ client.on('message', async (message) => {
     || message.content.toLowerCase().includes('neil')) {
     await message.channel.send('Ne prononce plus jamais ce nom.');
   }
-  if (message.content.toLowerCase() === "fdp"){
+  if (message.content.toLowerCase() === 'fdp') {
     await message.author.kick();
     message.channel.send("NE DITES PAS CA");
   }
