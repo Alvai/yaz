@@ -13,12 +13,9 @@ let botData = [];
 const checkIfExists = (message, command) => {
   if (command.words) {
     return command.words.some((v) => {
-      console.log(command.mustBeEqual);
       if (command.mustBeEqual) {
-        console.log('is it strickly equal : ', message.toLowerCase() === v);
         return message.toLowerCase() === v;
       }
-      console.log('does it contains the word : ', message.indexOf(v) >= 0);
       return message.indexOf(v) >= 0;
     });
   }
@@ -34,7 +31,6 @@ const getAnswer = (message) => {
       res = false;
     }
   }
-  console.log('end of function ,res is : ', res);
   return res;
 };
 
@@ -49,6 +45,8 @@ const isHeroku = () => {
   }
   return false;
 };
+
+const getRandom = (min, max) => Math.floor((Math.random() * (max - min)) + min);
 
 Yaz.on('ready', async () => {
   await axios.get(process.env.API_URL)
@@ -102,7 +100,10 @@ Yaz.on('message', async (message) => {
   // and not get into a spam loop (we call that "botception").
   if (message.author.bot) return;
 
-  // thi
+  // just some randomness so he doesn't talk ALL THE FREAKING TIME
+  if (getRandom(0, 2) !== 0) return;
+
+  // destroy the bot
   if (message.content === '!stop') {
     await Yaz.destroy().then(() => console.log('stopped'));
     return;
