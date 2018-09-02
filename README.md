@@ -29,11 +29,11 @@ Please [open an issue](https://github.com/IvanMiIosevic/yaz/issues/new) for supp
 
 ## Contributing
 
+Clone, Create a branch, add commits, and [open a pull request](https://github.com/IvanMiIosevic/yaz/compare/).
+
 ### Before Commit 
 
 run 
 ```cli
 npm run lint
 ```
-
-Clone, Create a branch, add commits, and [open a pull request](https://github.com/IvanMiIosevic/yaz/compare/).
