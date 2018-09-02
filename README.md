@@ -33,7 +33,7 @@ Clone, Create a branch, add commits, and [open a pull request](https://github.co
 
 ### Before Commit 
 
-run 
+run :
 ```cli
 npm run lint
 ```
