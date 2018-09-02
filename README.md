@@ -1,26 +1,39 @@
-YAZ BOT FOR DISCORD 
--------------------
+# YAZ BOT FOR DISCORD 
 [![Known Vulnerabilities](https://snyk.io/test/github/IvanMiIosevic/Yaz/badge.svg?targetFile=package.json)](https://snyk.io/test/github/IvanMiIosevic/Yaz?targetFile=package.json)
 [![Build Status](https://travis-ci.org/IvanMiIosevic/yaz.svg?branch=master)](https://travis-ci.org/IvanMiIosevic/yaz)
 
-# Install
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Support](#support)
+- [Contributing](#contributing)
+
+## Installation
 
 ```cli
 npm install
 ```
 
-open app.js and the template AFTER THE LAST IF
+## Usage
 
-```js
+Add your secrets in a .env file and run :
 
-  if(message.content.includes("WHAT YOU WANT TO SAY")) {
-    const m = await message.channel.send("WHAT THE BOT IS GOING TO SAY");
-  }
-
+```javascript
+node app.js
 ```
-## Before Commit 
+
+## Support
+
+Please [open an issue](https://github.com/IvanMiIosevic/yaz/issues/new) for support.
+
+## Contributing
+
+### Before Commit 
 
 run 
 ```cli
 npm run lint
 ```
+
+Clone, Create a branch, add commits, and [open a pull request](https://github.com/IvanMiIosevic/yaz/compare/).
