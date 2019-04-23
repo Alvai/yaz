@@ -21,6 +21,7 @@ const checkIfExists = (message, command) => {
   }
   return false;
 };
+
 const getAnswer = (message) => {
   let res = '';
   for (let i = 0; i < botData.length; i += 1) {
@@ -39,13 +40,6 @@ const getAnswer = (message) => {
 // this is what we're refering to. Your client.
 const Yaz = new Discord.Client();
 
-const isHeroku = () => {
-  if (process.env.NODE && process.env.NODE.indexOf('heroku')) {
-    return true;
-  }
-  return false;
-};
-
 const getRandom = (min, max) => Math.floor((Math.random() * (max - min)) + min);
 
 Yaz.on('ready', async () => {
@@ -57,15 +51,12 @@ Yaz.on('ready', async () => {
       botData = [];
     });
 
-  // Check if bot is run from heroku or not
-  console.log(isHeroku());
-
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot has started, with ${Yaz.users.size} users, in ${Yaz.channels.size} channels of ${Yaz.guilds.size} guilds.`);
 
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  Yaz.user.setActivity('Getting some updates');
+  Yaz.user.setActivity(process.env.MOOD || '');
   console.log(botData);
 });
 
