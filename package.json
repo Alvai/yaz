@@ -10,7 +10,9 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -19,11 +21,13 @@
     "axios": "^0.18.0",
     "discord.js": "^11.3.2",
     "dotenv": "^6.0.0",
-    "moment": "^2.22.2"
+    "moment": "^2.22.2",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0"
-  }
+  },
+  "snyk": true
 }
