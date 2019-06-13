@@ -35,6 +35,7 @@ const getAnswer = (message) => {
   return res;
 };
 
+const luck = process.env.luck || 2;
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
@@ -92,7 +93,7 @@ Yaz.on('message', async (message) => {
   if (message.author.bot) return;
 
   // just some randomness so he doesn't talk ALL THE FREAKING TIME
-  if (getRandom(0, 2) !== 0) return;
+  if (getRandom(0, luck) !== 0) return;
 
   // destroy the bot
   if (message.content === '!stop') {
