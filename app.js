@@ -35,7 +35,7 @@ const getAnswer = (message) => {
   return res;
 };
 
-const luck = process.env.luck || 2;
+const luck = process.env.LUCK || 2;
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
