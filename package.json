@@ -22,7 +22,7 @@
     "discord.js": "^11.3.2",
     "dotenv": "^6.0.0",
     "moment": "^2.22.2",
-    "snyk": "^1.316.1"
+    "snyk": "^1.425.4"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
