@@ -17,7 +17,7 @@
     "axios": "^0.19.0",
     "discord.js": "^11.3.2",
     "dotenv": "^6.0.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "snyk": "^1.316.1"
   },
   "devDependencies": {
